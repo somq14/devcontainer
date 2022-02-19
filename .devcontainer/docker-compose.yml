@@ -4,7 +4,7 @@ services:
   # VSCode が接続するコンテナ
   workspace:
     # 使用する Docker イメージを指定
-    # https://github.com/somq14/devcontainer-images
+    # https://github.com/somq14/devcontainer
     image: somq14/devcontainer:v0
 
     # コンテナが即終了しないようにコンテナの起動コマンドを変更する
