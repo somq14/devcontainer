@@ -1,0 +1,35 @@
+{
+  // docker-compose ファイルには起動すべきコンテナが定義されている
+  "dockerComposeFile": "./docker-compose.yml",
+
+  // VSCode の接続先となる docker-compose のサービス名
+  "service": "workspace",
+
+  // VSCode が開くコンテナ内のディレクトリ
+  "workspaceFolder": "/home/vscode/devcontainer-example",
+
+  // コンテナ側にインストールする拡張機能の一覧
+  // ホスト側にインストールする拡張機能は .vscode/extensions.json に記載がある
+  "extensions": [
+    // テキストファイルの形式を自動で統一
+    "EditorConfig.EditorConfig",
+    // スペルチェッカ
+    "streetsidesoftware.code-spell-checker",
+    // Git の拡張機能
+    "eamodio.gitlens",
+
+    // markdown ファイルのサポート
+    "yzhang.markdown-all-in-one",
+    // yaml ファイルのサポート
+    "redhat.vscode-yaml",
+    // toml ファイルのサポート
+    "bungcip.better-toml",
+    // docker 系ファイルのサポート
+    "ms-azuretools.vscode-docker",
+
+    // JavaScript 等の成形ツール
+    "esbenp.prettier-vscode",
+    // JavaScript 等の静的解析ツール
+    "dbaeumer.vscode-eslint"
+  ]
+}
