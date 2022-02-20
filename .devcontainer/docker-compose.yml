@@ -14,5 +14,7 @@ services:
       # ホストのプロジェクト全体をコンテナにマウントする
       # delegated はホストとコンテナとの一貫性を犠牲にパフォーマンスを向上させるオプション
       - ..:/home/vscode/devcontainer-example:delegated
+      # ホストの aws 設定をマウント
+      - ~/.aws:/home/vscode/.aws
       # シェルの履歴等を残すために永続化用のディレクトリにボリュームを割り当てる
       - /home/vscode/.persistent
