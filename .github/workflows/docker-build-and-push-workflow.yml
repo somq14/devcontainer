@@ -33,16 +33,16 @@ jobs:
         with:
           context: .
           build-args: |
-            DEBIAN_VERSION=11.2
             USER_NAME=vscode
             USER_UID=1000
             USER_GID=1000
-            PYTHON_VERSION=3.10.2
+            DEBIAN_VERSION=11.2
             NODEJS_VERSION=14.18.3
             YARN_VERSION=1.22.17
+            PYTHON_VERSION=3.10.2
             AWS_CLI_VERSION=2.4.19
-            AWS_MFA_VERSION=0.0.12
             AWS_SAM_VERSION=1.38.1
+            AWS_MFA_VERSION=0.0.12
           tags: "${{ env.DOCKER_IMAGE_REPOSITORY }}:${{ github.ref_name }}"
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
