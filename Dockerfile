@@ -1,5 +1,4 @@
 # Debian のバージョンを指定
-# https://hub.docker.com/_/debian?tab=description
 ARG DEBIAN_VERSION
 FROM debian:${DEBIAN_VERSION}
 
@@ -44,7 +43,6 @@ ENV TZ Asia/Tokyo
 ################################################################################
 
 # Python のバージョンを指定
-# https://www.python.org/downloads/
 ARG PYTHON_VERSION
 
 RUN : \
@@ -76,7 +74,6 @@ RUN : \
 ################################################################################
 
 # Node.js のバージョンを指定
-# https://nodejs.org/ja/download/releases/
 ARG NODEJS_VERSION
 
 RUN : \
@@ -89,7 +86,6 @@ RUN : \
   && rm -r /tmp/nodejs
 
 # yarn のバージョンを指定
-# https://www.npmjs.com/package/yarn
 ARG YARN_VERSION
 RUN npm install -g yarn@${YARN_VERSION}
 
@@ -98,7 +94,6 @@ RUN npm install -g yarn@${YARN_VERSION}
 ################################################################################
 
 # aws-cli のバージョンを指定
-# https://nodejs.org/ja/download/releases/
 ARG AWS_CLI_VERSION
 
 RUN : \
@@ -118,7 +113,6 @@ RUN pip3 install aws-mfa===${AWS_MFA_VERSION}
 ################################################################################
 
 # AWS SAM のバージョンを指定
-# https://github.com/aws/aws-sam-cli/releases
 ARG AWS_SAM_VERSION
 
 RUN : \
